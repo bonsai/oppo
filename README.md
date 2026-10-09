@@ -2,6 +2,10 @@
 
 **oppo / Dial P2** — 人と人の経験・記憶を集め、証拠とともに再接続するリサーチプロジェクト。
 
+## Ecosystem
+
+See [ECOSYSTEM.md](./ECOSYSTEM.md) for repository boundaries, loose-coupling rules, and research handoff contracts across `oppo-research`, `oppo-novel`, and `oppo-poc`.
+
 ## Research seed
 
 最初のテーマは、1990年代を中心とした「ダイヤルQ2の思い出」。
