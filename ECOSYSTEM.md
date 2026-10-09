@@ -15,6 +15,17 @@ The repositories are **loosely coupled projects**, not one application split acr
 | [oppo-novel](https://github.com/bonsai/oppo-novel) | Fiction, characters, narrative structure | Manuscript and creative assets | Canonical historical evidence |
 | [oppo-poc](https://github.com/bonsai/oppo-poc) | Product experiments and interaction validation | Runnable prototype, usability observations, experiment results | Historical source of truth |
 
+## Adjacent conversation-space projects
+
+These repositories are included as **independent neighboring projects**, not as modules or dependencies of `oppo`. Their repositories are currently empty, so the roles below are provisional interpretations of their names and should be confirmed before implementation.
+
+| Repository | Provisional focus | Boundary with oppo |
+|---|---|---|
+| [idobata](https://github.com/bonsai/idobata) | An open, informal place for people to gather and talk (井戸端) | Owns its community/conversation experience; does not depend on oppo research or runtime |
+| [kitsuenjo](https://github.com/bonsai/kitsuenjo) | A casual, incidental conversation space inspired by a smoking area (喫煙所) | Owns its own interaction rules and experience; does not depend on idobata or oppo |
+
+Treat these as sibling experiments around **where and how people speak**, while `oppo` focuses on telephone/voice-media history and its reinterpretation. If they later exchange ideas, use links or small exported artifacts; do not create a shared database or shared application by default.
+
 Repository names and boundaries can evolve independently. This table describes current intent, not a requirement that every repo be implemented now.
 
 ## Dependency direction
@@ -24,13 +35,15 @@ flowchart TD
     O[oppo: ecosystem map] -. links and coordination .-> R[oppo-research]
     O -. links and coordination .-> N[oppo-novel]
     O -. links and coordination .-> P[oppo-poc]
+    O -. ecosystem index only .-> I[idobata: informal gathering]
+    O -. ecosystem index only .-> K[kitsuenjo: incidental conversation]
     R -->|Research Brief: cited facts, uncertainty, open questions| N
     R -->|Research Brief: context and constraints| P
     P -->|experiment report and observations| R
     N -. optional creative questions .-> R
 ```
 
-Arrows represent **information handoffs**, not build-time or runtime dependencies. No repository should need another repository's source code, package installation, database, secrets, or deployment in order to function.
+Dashed arrows to `idobata` and `kitsuenjo` mean **indexing only**; they do not imply a product integration. Other arrows represent **information handoffs**, not build-time or runtime dependencies. No repository should need another repository's source code, package installation, database, secrets, or deployment in order to function.
 
 ## Handoff contracts
 
